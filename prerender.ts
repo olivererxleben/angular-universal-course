@@ -1,14 +1,13 @@
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
-import {renderModuleFactory} from '@angular/platform-server';
+import {renderModuleFactory} from '@angular/platform-server'; // renderer
 import {writeFileSync} from 'fs';
 
-const {AppServerModuleNgFactory} = require('./dist-server/main');
-
+const {AppServerModuleNgFactory} = require('./dist/angular-universal-course-server/main'); // use the bundle
 
 renderModuleFactory(AppServerModuleNgFactory, {
     document: '<app-root></app-root>',
-    url: '/'
+    url: '/' // prerender the root route
 })
     .then(html => {
         console.log('Pre-rendering successful, saving prerender.html');

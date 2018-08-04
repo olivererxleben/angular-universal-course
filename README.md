@@ -151,3 +151,14 @@ If you are looking for the Complete Typescript 2 Course - Build a REST API, the 
 
 ![Complete Typescript Course](https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png)
 
+## History of Commands and what I did
+
+Enable Angular Universal: 
+
+        ng g universal --client-project angular-universal-course 
+        
+Failed, because was already there, I added 
+
+        ng g universal --client-priject angular-universal-course --force 
+        
+to regenerate them.   
